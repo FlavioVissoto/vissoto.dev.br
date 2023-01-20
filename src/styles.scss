@@ -1,1 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./assets/scss/reset.scss";
+@import "./assets/scss/colors.scss";
+@import "./assets/fonts/Roboto/roboto.scss";
+
+body {
+  font-family: "Roboto";
+
+  * {
+    color: color(gray-700);
+  }
+  a {
+    text-decoration: none;
+  }
+  a,
+  p,
+  span,
+  label {
+    font-size: 14px;
+  }
+}

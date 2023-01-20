@@ -1,0 +1,83 @@
+@import "./../../../assets/scss/colors.scss";
+
+.header {
+  position: relative;
+  background-color: color(white);
+
+  .brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bold;
+    padding: 0 1rem;
+
+    span {
+      font-size: 16px;
+    }
+
+    & > :not([hidden]) ~ :not([hidden]) {
+      margin-right: 0.5rem;
+      margin-left: 0.5rem;
+    }
+
+    &:hover{
+      
+    }
+  }
+
+  &_wrapper {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    box-shadow: rgba(149, 157, 165, 0.7) 0px 3px 5px 0px;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1rem;
+
+    .nav_wrapper {
+      display: flex;
+      & > :not([hidden]) ~ :not([hidden]) {
+        margin-right: 1rem;
+        margin-left: 1rem;
+      }
+
+      .nav_item {
+        a {
+          display: block;
+
+          &:hover {
+            color: color(blue-700);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    &_toggle {
+      display: none;
+    }
+  }
+
+  // .brand,
+  // .nav_item {
+  //   background-image: linear-gradient(color(blue-500), color(blue-500));
+  //   background-size: 0% 2px;
+  //   background-repeat: no-repeat;
+  //   transition: background-size 0.3s;
+  //   background-position: 50% 100%;
+
+  //   &:hover {
+  //     background-size: 100% 2px;
+  //   }
+  // }
+}

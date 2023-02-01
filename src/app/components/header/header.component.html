@@ -1,12 +1,26 @@
 <div class="header">
-    <div class="header_wrapper">
-        <a [routerLink]="'/'" class="brand" title="vissoto.dev.br">
-            <img src="./../../../assets/svg/logo.svg" alt="Logo">
-            <span>VissotoDevBr</span>
-        </a>
+    <div class="content layout">
+        <div class="brand">
+            <div class="nav_toggle">
+                <div class="hamburger">
+                    <input type="checkbox" id="hamburger-chk" class="hamburger-chk" (change)="toggleMenu()">
+                    <label for="hamburger-chk">
+                        <div class="icon">
+                            <span class="bar-top"></span>
+                            <span class="bar-mid"></span>
+                            <span class="bar-bot"></span>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <a [routerLink]="'/'" class="logo" title="vissoto.dev.br">
+                <img src="./../../../assets/svg/logo.svg" alt="Logo">
+                <span>VissotoDevBr</span>
+            </a>
+        </div>
         <nav class="nav">
-            <button class="nav_toggle" aria-expanded="false" type="button">menu</button>
-            <ul class="nav_wrapper">
+            <ul class="nav_itens">
                 <li class="nav_item"><a href="#">Página Inicial</a></li>
                 <li class="nav_item"><a href="#">Sobre</a></li>
                 <li class="nav_item"><a href="#">Serviços</a></li>

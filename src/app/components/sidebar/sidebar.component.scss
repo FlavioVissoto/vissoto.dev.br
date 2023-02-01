@@ -1,0 +1,102 @@
+@import './../../../assets/scss/colors.scss';
+@import './../../../assets/scss/media-query.scss';
+@import './../../../assets/scss/prefix.scss';
+
+$width-menu: 180px;
+
+.nav-sidebar {
+  border-top: 1px solid color(gray-200);
+
+  &.show {
+    position: fixed;
+    left: 0;
+    top: 49px;
+    right: 0;
+    bottom: 0;
+    padding-top: 0;
+
+    .modal-backdrop {
+      background-color: color(total-black, 0.7);
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 9998;
+
+      & + ul {
+        &.sidebar {
+          position: relative;
+          z-index: 9999;
+          background-color: color(white);
+          width: $width-menu;
+          
+          
+          a,
+          span {
+            //color: color(white);
+          }
+        }
+      }
+    }
+  }
+
+  ul {
+    &.sidebar {
+      height: calc(100vh - 101px);
+      overflow-y: auto;
+      & > li {
+        padding: 0.25rem 0;
+      }
+      li {
+        a[href] {
+          &:hover {
+            background-color: color(gray-200);
+          }
+        }
+
+        .item {
+          display: flex;
+          span,
+          a {
+            &.title {
+              padding-left: 1rem;
+              font-size: 0.875rem;
+              line-height: 1.25rem;
+            }
+            &.auxiliary {
+              display: inline-flex;
+              justify-content: center;
+              align-items: center;
+
+              padding-left: 0.5rem;
+              padding-right: 0.5rem;
+              margin-left: 0.75rem;
+            }
+          }
+        }
+        .sub-item {
+          padding-left: 1rem;
+          li {
+            margin-bottom: 0.25rem;
+            a {
+              padding: 0 1rem;
+              border-radius: 0.5rem;
+
+              span {
+                &.title {
+                  font-size: 0.75rem;
+                  line-height: 1rem;
+                }
+                &.auxiliary {
+                  font-size: 0.75rem;
+                  line-height: 1rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

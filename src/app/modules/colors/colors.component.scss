@@ -7,28 +7,43 @@
     font-weight: 800;
   }
   .colors {
+    & > div {
+      margin: 15px 0;
+      p {
+        text-transform: capitalize;
+        margin-bottom: 5px;
+      }
+    }
     .item {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+
+      p {
+        width: 100%;
+        padding-bottom: 2px;
+        font-weight: 600;
+      }
+
       .color {
         position: relative;
-        height: 100px;
-        width: 250px;
+        height: 40px;
+        width: 90px;
         border: 1px solid color(gray-400);
         background: rgb(16, 60, 231);
         background: linear-gradient(90deg, rgba(16, 60, 231, 1) 0%, rgba(100, 233, 255, 1) 100%);
         border-radius: 10px;
 
         .name {
+          font-size: 12px;
           position: absolute;
           margin: 0 auto;
           text-align: center;
-          //   background-color: color(white);
           width: 75%;
-          transform: translate(-50%, -50%);
+          transform: translate(-50%, -25%);
           left: 50%;
-          border-radius: 10px;
           bottom: 0;
-          padding: 2px 0;
-          font-weight: 700;
+          font-weight: 500;
           color: color(white);
         }
       }

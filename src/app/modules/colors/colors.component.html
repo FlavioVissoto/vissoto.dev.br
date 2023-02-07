@@ -1,10 +1,15 @@
 <div class="color-module">
-    <h1 class="title">Paleta de Cores</h1>
+    <div class="layout">
+        <h1 class="title">Paleta de Cores</h1>
 
-    <div class="colors">
-        <div class="item">
-            <div class="color mojito">
-                <p class="name">Mojito</p>
+        <div class="colors">
+            <div class="" *ngFor="let item of solidColors">
+                <p>{{item.name}}</p>
+                <div class="item">
+                    <div class="color" *ngFor="let tones of item.tones">
+                        <p class="name">{{tones}}</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

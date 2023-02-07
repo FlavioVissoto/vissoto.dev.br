@@ -5,11 +5,13 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { SidebarServices } from '../services/sidebar.services';
+import { FooterComponent } from './footer/footer.component';
+import { LogoComponent } from './logo/logo.component';
 
 @NgModule({
-  declarations: [HeaderComponent, SidebarComponent],
+  declarations: [HeaderComponent, SidebarComponent, FooterComponent, LogoComponent],
   providers: [SidebarServices],
   imports: [CommonModule, ReactiveFormsModule, AppRoutingModule],
-  exports: [HeaderComponent, SidebarComponent],
+  exports: [HeaderComponent, SidebarComponent, FooterComponent, LogoComponent],
 })
 export class ComponentsModule {}

@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "title": "Cores",
+      "items": [
+        {
+          "href": "/colors",
+          "text": "Cores padrões",
+          "target": "_parent",
+          "selected": false
+        }
+      ]
+    },
+    {
       "title": "HTTP Client",
       "items": [
         {

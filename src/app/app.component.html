@@ -1,14 +1,17 @@
+<div class="container-skewed"></div>
 <div class="container">
-    <div class="navbar">
+    <div class="header-area">
         <app-header (byToggleMenu)="toggleMenu($event)"></app-header>
     </div>
-    <div class="content layout">
-        <div class="sidebar" [ngClass]="{'show': showMenu}">
-            <app-sidebar [byToggleMenu]="byToggleMenu"></app-sidebar>
-        </div>
-        <div class="main">
-            <router-outlet></router-outlet>
+    <div class="main-area">
+        <div class="layout wrapper">
+            <app-sidebar class="sidebar" [byToggleMenu]="byToggleMenu"></app-sidebar>
+            <div class="content">
+                <router-outlet></router-outlet>
+            </div>
         </div>
     </div>
-    <div class="footer">Footer</div>
+    <div class="footer-area">
+        <app-footer></app-footer>
+    </div>
 </div>

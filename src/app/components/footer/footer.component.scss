@@ -1,0 +1,132 @@
+@import './../../../assets/scss/main.scss';
+
+.footer {
+  position: relative;
+  background: color(white);
+  box-shadow: color(gray-200) 0px -3px 5px 0px;
+
+  .content {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+
+      .link-boxes {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .media-icons {
+        display: flex;
+
+        a {
+          height: 30px;
+          width: 30px;
+          margin: 0 8px;
+          border-radius: 50%;
+          text-align: center;
+          line-height: 30px;
+          color: #fff;
+          font-size: 17px;
+          text-decoration: none;
+          transition: all 0.3s ease;
+
+          i {
+            color: #fff;
+          }
+
+          &.facebook,
+          &.linkedin {
+            background: color(blue-600);
+            &:hover {
+              i {
+                color: color(blue-600);
+              }
+              background: #fff;
+            }
+          }
+
+          &.twitter {
+            background: color(blue-400);
+            &:hover {
+              i {
+                color: color(blue-400);
+              }
+              background: #fff;
+            }
+          }
+
+          &.instagram {
+            background: color(pink-600);
+            &:hover {
+              i {
+                color: color(pink-600);
+              }
+              background: #fff;
+            }
+          }
+
+          &.youtube {
+            background: color(red-500);
+            &:hover {
+              i {
+                color: color(pink-500);
+              }
+              background: #fff;
+            }
+          }
+        }
+      }
+      
+    }
+
+    .bottom {
+      display: none;
+      // display: flex;
+      justify-content: space-between;
+
+      .slogan {
+        width: 50%;
+        padding: 10px;
+
+        p {
+          font-size: 14px;
+        }
+        .author {
+          display: inline-block;
+          width: 100%;
+          text-align: right;
+        }
+      }
+
+      .links {
+        display: flex;
+        width: 50%;
+        justify-content: space-around;
+
+        .column {
+          h3 {
+            font-weight: 800;
+            padding-bottom: 5px;
+          }
+
+          a {
+            display: block;
+            padding: 2px 0;
+            font-size: 12px;
+            line-height: 0.8rem;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+}

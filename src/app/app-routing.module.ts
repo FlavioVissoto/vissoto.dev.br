@@ -9,6 +9,12 @@ const routes: Routes = [
     redirectTo: '',
   },
   {
+    path: 'colors',
+    loadChildren: () => {
+      return import('./modules/colors/colors.module').then((m) => m.ColorsModule);
+    },
+  },
+  {
     path: '',
     loadChildren: () => {
       return import('./modules/home/home.module').then((m) => m.HomeModule);

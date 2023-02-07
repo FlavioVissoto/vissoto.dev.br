@@ -1,0 +1,47 @@
+@import './../../../assets/scss/main.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 5px;
+
+  .home {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+
+    .logo {
+      i {
+        font-size: 200px;
+        color: (black);
+        padding: 15px;
+      }
+    }
+
+    .welcome {
+      text-align: center;
+
+      h1 {
+        font-size: 32px;
+        padding-bottom: 10px;
+      }
+
+      p {
+        font-size: 16px;
+        a {
+          &[href] {
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: underline;
+          }
+
+          &:hover {
+            color: color(blue-700);
+          }
+        }
+      }
+    }
+  }
+}

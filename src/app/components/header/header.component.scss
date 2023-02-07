@@ -3,12 +3,14 @@
 @import './../../../assets/scss/prefix.scss';
 
 .header {
-  position: relative;
+  position: fixed;
+  width: 100%;
   background-color: color(white);
-  padding: 8px 0;
+  padding: 5px 0;
   box-shadow: color(gray-200) 0px 3px 5px 0px;
 
   .content {
+    position: relative;
     display: flex;
     justify-content: space-between;
 
@@ -16,25 +18,9 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 0 0.5rem;
 
       .nav_toggle {
         display: none;
-      }
-
-      .logo {
-        display: flex;
-        align-items: center;
-        font-weight: bold;
-        padding: 0 0.5rem;
-
-        span {
-          font-size: 16px;
-        }
-
-        & > :not([hidden]) ~ :not([hidden]) {
-          margin: 0 0.2rem;
-        }
       }
     }
 
@@ -61,10 +47,9 @@
           a {
             padding: 0.5rem;
             display: block;
-            border-radius: 40px;
+            white-space: nowrap;
 
             &:hover {
-              background-color: color(gray-100);
               color: color(blue-700);
             }
 

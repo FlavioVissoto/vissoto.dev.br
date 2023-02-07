@@ -1,0 +1,32 @@
+@import './../../../assets/scss/main.scss';
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  padding: 0 0.5rem;
+
+  i {
+    font-size: 28px;
+  }
+
+  span {
+    font-size: 16px;
+  }
+
+  i,
+  span {
+    @include prefix(transition, color 0.2s);
+  }
+
+  & > :not([hidden]) ~ :not([hidden]) {
+    margin: 0 0.2rem;
+  }
+
+  &:hover {
+    i,
+    span {
+      color: color(blue-700);
+    }
+  }
+}

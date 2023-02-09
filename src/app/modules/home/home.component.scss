@@ -1,9 +1,14 @@
 @import './../../../assets/scss/main.scss';
 
+:host {
+  --color-one: #eee;
+  --color-two: #374151;
+  --bg-size: 400%;
+}
+
 .container {
   display: flex;
   flex-direction: column;
-  padding-top: 5px;
 
   .home {
     display: flex;
@@ -15,8 +20,14 @@
     .logo {
       i {
         font-size: 200px;
-        color: (black);
+        // color: (black);
         padding: 15px;
+
+        background: linear-gradient(90deg, var(--color-one), var(--color-two), var(--color-one)) 0 0 / var(--bg-size) 100%;
+        color: transparent;
+        background-clip: text;
+        //-webkit-text-fill-color: transparent;
+        //animation: gradient 15s ease infinite;
       }
     }
 
@@ -42,6 +53,23 @@
           }
         }
       }
+    }
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .container {
+    .home {
+      .logo {
+        i {
+          animation: move-bg 8s linear infinite;
+        }
+      }
+    }
+  }
+  @keyframes move-bg {
+    to {
+      background-position: var(--bg-size) 0;
     }
   }
 }

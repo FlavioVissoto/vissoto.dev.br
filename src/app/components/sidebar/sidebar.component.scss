@@ -1,105 +1,74 @@
-@import './../../../assets/scss/colors.scss';
-@import './../../../assets/scss/media-query.scss';
-@import './../../../assets/scss/prefix.scss';
-@import './../../../assets/scss/variables.scss';
-
+@import './../../../assets/scss/main.scss';
 
 .nav-sidebar {
-  position: fixed;
-  width: $width-menu;
-  &.show {
-    position: fixed;
-    left: 0;
-    top: 49px;
-    right: 0;
-    bottom: 0;
-    padding-top: 0;
+  overflow-y: auto;
+  @include min-height-content;
 
-    .modal-backdrop {
-      background-color: color(total-black, 0.7);
-      bottom: 0;
-      left: 0;
-      position: absolute;
-      right: 0;
-      top: 0;
-      z-index: 9998;
-
-      & + ul {
-        &.sidebar {
-          position: relative;
-          z-index: 9999;
-          background-color: color(white);
-          width: $width-menu;
-          
-          
-          a,
-          span {
-            //color: color(white);
-          }
-        }
-      }
+  .brand {
+    display: none;
+    @include tablet {
+      display: flex;
     }
+    justify-content: center;
+    align-items: center;
+    height: $height-header * 2;
+    background-color: color(blue-900);
   }
 
-  &>ul{
-    padding-top: 5px;
-  }
+  .nav-list {
+    .nav-item {
+      .nav-link {
+        align-items: center;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        height: 24px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding: 0.5rem;
+        @include prefix(transition, color 125ms);
 
-  ul {
-    &.sidebar {
-      max-height: calc(100vh);
-      overflow-y: auto;
-      & > li {
-        padding: 0.25rem 0;
+        i {
+          @include prefix(transition, transform 125ms);
+          @include font-size-md;
+        }
+
+        &:hover {
+          color: color(blue-600);
+          i {
+            color: color(blue-600);
+          }
+        }
       }
-      li {
-        a[href] {
-          &:hover {
-            background-color: color(gray-200);
-          }
+
+      .nav-sublist {
+        max-height: 0;
+        overflow: hidden;
+        @include prefix(transition, max-height 125ms);
+
+        .nav-link {
+          height: auto;
+          padding-left: 2rem;
+          @include font-size-xs;
         }
+      }
 
-        .item {
-          display: flex;
-          span,
-          a {
-            &.title {
-              padding-left: 1rem;
-              font-size: 0.875rem;
-              line-height: 1.25rem;
-            }
-            &.auxiliary {
-              display: inline-flex;
-              justify-content: center;
-              align-items: center;
-
-              padding-left: 0.5rem;
-              padding-right: 0.5rem;
-              margin-left: 0.75rem;
+      .nav-sublist-control {
+        display: none;
+        &:checked {
+          & ~ .nav-sublist {
+            max-height: 300px;
+          }
+          & ~ .nav-link {
+            i {
+              transform: rotate(90deg);
             }
           }
         }
-        .sub-item {
-          padding-left: 1rem;
-          li {
-            margin-bottom: 0.25rem;
-            a {
-              padding: 0 1rem;
-              border-radius: 0.5rem;
+      }
 
-              span {
-                &.title {
-                  font-size: 0.75rem;
-                  line-height: 1rem;
-                }
-                &.auxiliary {
-                  font-size: 0.75rem;
-                  line-height: 1rem;
-                }
-              }
-            }
-          }
-        }
+      @include tablet {
+        border-bottom: 0.05rem solid color(gray-800, 0.07);
       }
     }
   }

@@ -3,15 +3,22 @@
 .logo {
   display: flex;
   align-items: center;
-  font-weight: bold;
   padding: 0 0.5rem;
 
+  a,
+  span,
   i {
-    font-size: 28px;
+    color: color(white);
   }
-
+  
+  i {
+    font-size: 30px;
+  }
+  
   span {
+    font-weight: 500;
     font-size: 16px;
+    line-height: 2.2;
   }
 
   i,
@@ -26,7 +33,7 @@
   &:hover {
     i,
     span {
-      color: color(blue-700);
+      color: color(gray-300);
     }
   }
 }

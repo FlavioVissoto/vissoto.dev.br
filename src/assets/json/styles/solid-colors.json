@@ -2,55 +2,588 @@
   "data": [
     {
       "name": "red",
-      "tones": [50, 100, 200, 300, 400, 500, 600, 700, 800, 900]
+      "tones": [
+        {
+          "hexadecimal": "#fef2f2",
+          "weight": 50
+        },
+        {
+          "hexadecimal": "#fee2e2",
+          "weight": 200
+        },
+        {
+          "hexadecimal": "#fecaca",
+          "weight": 200
+        },
+        {
+          "hexadecimal": "#fca5a5",
+          "weight": 300
+        },
+        {
+          "hexadecimal": "#f87171",
+          "weight": 400
+        },
+        {
+          "hexadecimal": "#ef4444",
+          "weight": 500
+        },
+        {
+          "hexadecimal": "#dc2626",
+          "weight": 600
+        },
+        {
+          "hexadecimal": "#b91c1c",
+          "weight": 700
+        },
+        {
+          "hexadecimal": "#991b1b",
+          "weight": 800
+        },
+        {
+          "hexadecimal": "#7f1d1d",
+          "weight": 900
+        }
+      ]
     },
     {
       "name": "gray",
-      "tones": [50, 100, 200, 300, 400, 500, 600, 700, 800, 900]
+      "tones": [
+        {
+          "hexadecimal": "#f9fafb",
+          "weight": 50
+        },
+        {
+          "hexadecimal": "#f3f4f6",
+          "weight": 200
+        },
+        {
+          "hexadecimal": "#e5e7eb",
+          "weight": 200
+        },
+        {
+          "hexadecimal": "#d1d5db",
+          "weight": 300
+        },
+        {
+          "hexadecimal": "#9ca3af",
+          "weight": 400
+        },
+        {
+          "hexadecimal": "#6b7280",
+          "weight": 500
+        },
+        {
+          "hexadecimal": "#4b5563",
+          "weight": 600
+        },
+        {
+          "hexadecimal": "#374151",
+          "weight": 700
+        },
+        {
+          "hexadecimal": "#1f2937",
+          "weight": 800
+        },
+        {
+          "hexadecimal": "#111827",
+          "weight": 900
+        }
+      ]
     },
     {
       "name": "purple",
-      "tones": [50, 100, 200, 300, 400, 500, 600, 700, 800, 900]
+      "tones": [
+        {
+          "hexadecimal": "#faf5ff",
+          "weight": 50
+        },
+        {
+          "hexadecimal": "#f3e8ff",
+          "weight": 200
+        },
+        {
+          "hexadecimal": "#e9d5ff",
+          "weight": 200
+        },
+        {
+          "hexadecimal": "#d8b4fe",
+          "weight": 300
+        },
+        {
+          "hexadecimal": "#c084fc",
+          "weight": 400
+        },
+        {
+          "hexadecimal": "#a855f7",
+          "weight": 500
+        },
+        {
+          "hexadecimal": "#9333ea",
+          "weight": 600
+        },
+        {
+          "hexadecimal": "#7e22ce",
+          "weight": 700
+        },
+        {
+          "hexadecimal": "#6b21a8",
+          "weight": 800
+        },
+        {
+          "hexadecimal": "#581c87",
+          "weight": 900
+        }
+      ]
     },
     {
       "name": "sky",
-      "tones": [50, 100, 200, 300, 400, 500, 600, 700, 800, 900]
+      "tones": [
+        {
+          "hexadecimal": "#f0f9ff",
+          "weight": 50
+        },
+        {
+          "hexadecimal": "#e0f2fe",
+          "weight": 200
+        },
+        {
+          "hexadecimal": "#bae6fd",
+          "weight": 200
+        },
+        {
+          "hexadecimal": "#7dd3fc",
+          "weight": 300
+        },
+        {
+          "hexadecimal": "#38bdf8",
+          "weight": 400
+        },
+        {
+          "hexadecimal": "#0ea5e9",
+          "weight": 500
+        },
+        {
+          "hexadecimal": "#0284c7",
+          "weight": 600
+        },
+        {
+          "hexadecimal": "#0369a1",
+          "weight": 700
+        },
+        {
+          "hexadecimal": "#075985",
+          "weight": 800
+        },
+        {
+          "hexadecimal": "#0c4a6e",
+          "weight": 900
+        }
+      ]
     },
     {
       "name": "blue",
-      "tones": [50, 100, 200, 300, 400, 500, 600, 700, 800, 900]
+      "tones": [
+        {
+          "hexadecimal": "#eff6ff",
+          "weight": 50
+        },
+        {
+          "hexadecimal": "#dbeafe",
+          "weight": 200
+        },
+        {
+          "hexadecimal": "#bfdbfe",
+          "weight": 200
+        },
+        {
+          "hexadecimal": "#93c5fd",
+          "weight": 300
+        },
+        {
+          "hexadecimal": "#60a5fa",
+          "weight": 400
+        },
+        {
+          "hexadecimal": "#3b82f6",
+          "weight": 500
+        },
+        {
+          "hexadecimal": "#2563eb",
+          "weight": 600
+        },
+        {
+          "hexadecimal": "#1d4ed8",
+          "weight": 700
+        },
+        {
+          "hexadecimal": "#1e40af",
+          "weight": 800
+        },
+        {
+          "hexadecimal": "#1e3a8a",
+          "weight": 900
+        }
+      ]
     },
     {
       "name": "green",
-      "tones": [50, 100, 200, 300, 400, 500, 600, 700, 800, 900]
+      "tones": [
+        {
+          "hexadecimal": "#f0fdf4",
+          "weight": 50
+        },
+        {
+          "hexadecimal": "#dcfce7",
+          "weight": 200
+        },
+        {
+          "hexadecimal": "#bbf7d0",
+          "weight": 200
+        },
+        {
+          "hexadecimal": "#86efac",
+          "weight": 300
+        },
+        {
+          "hexadecimal": "#4ade80",
+          "weight": 400
+        },
+        {
+          "hexadecimal": "#22c55e",
+          "weight": 500
+        },
+        {
+          "hexadecimal": "#16a34a",
+          "weight": 600
+        },
+        {
+          "hexadecimal": "#15803d",
+          "weight": 700
+        },
+        {
+          "hexadecimal": "#166534",
+          "weight": 800
+        },
+        {
+          "hexadecimal": "#14532d",
+          "weight": 900
+        }
+      ]
     },
     {
       "name": "yellow",
-      "tones": [50, 100, 200, 300, 400, 500, 600, 700, 800, 900]
+      "tones": [
+        {
+          "hexadecimal": "#fefce8",
+          "weight": 50
+        },
+        {
+          "hexadecimal": "#fef9c3",
+          "weight": 200
+        },
+        {
+          "hexadecimal": "#fef08a",
+          "weight": 200
+        },
+        {
+          "hexadecimal": "#fde047",
+          "weight": 300
+        },
+        {
+          "hexadecimal": "#facc15",
+          "weight": 400
+        },
+        {
+          "hexadecimal": "#eab308",
+          "weight": 500
+        },
+        {
+          "hexadecimal": "#ca8a04",
+          "weight": 600
+        },
+        {
+          "hexadecimal": "#a16207",
+          "weight": 700
+        },
+        {
+          "hexadecimal": "#854d0e",
+          "weight": 800
+        },
+        {
+          "hexadecimal": "#713f12",
+          "weight": 900
+        }
+      ]
     },
     {
       "name": "orange",
-      "tones": [50, 100, 200, 300, 400, 500, 600, 700, 800, 900]
+      "tones": [
+        {
+          "hexadecimal": "#fff7ed",
+          "weight": 50
+        },
+        {
+          "hexadecimal": "#ffedd5",
+          "weight": 200
+        },
+        {
+          "hexadecimal": "#fed7aa",
+          "weight": 200
+        },
+        {
+          "hexadecimal": "#fdba74",
+          "weight": 300
+        },
+        {
+          "hexadecimal": "#fb923c",
+          "weight": 400
+        },
+        {
+          "hexadecimal": "#f97316",
+          "weight": 500
+        },
+        {
+          "hexadecimal": "#ea580c",
+          "weight": 600
+        },
+        {
+          "hexadecimal": "#c2410c",
+          "weight": 700
+        },
+        {
+          "hexadecimal": "#9a3412",
+          "weight": 800
+        },
+        {
+          "hexadecimal": "#7c2d12",
+          "weight": 900
+        }
+      ]
     },
     {
       "name": "pink",
-      "tones": [50, 100, 200, 300, 400, 500, 600, 700, 800, 900]
+      "tones": [
+        {
+          "hexadecimal": "#fdf2f8",
+          "weight": 50
+        },
+        {
+          "hexadecimal": "#fce7f3",
+          "weight": 200
+        },
+        {
+          "hexadecimal": "#fbcfe8",
+          "weight": 200
+        },
+        {
+          "hexadecimal": "#f9a8d4",
+          "weight": 300
+        },
+        {
+          "hexadecimal": "#f472b6",
+          "weight": 400
+        },
+        {
+          "hexadecimal": "#ec4899",
+          "weight": 500
+        },
+        {
+          "hexadecimal": "#db2777",
+          "weight": 600
+        },
+        {
+          "hexadecimal": "#be185d",
+          "weight": 700
+        },
+        {
+          "hexadecimal": "#9d174d",
+          "weight": 800
+        },
+        {
+          "hexadecimal": "#831843",
+          "weight": 900
+        }
+      ]
     },
     {
       "name": "teal",
-      "tones": [50, 100, 200, 300, 400, 500, 600, 700, 800, 900]
+      "tones": [
+        {
+          "hexadecimal": "#f0fdfa",
+          "weight": 50
+        },
+        {
+          "hexadecimal": "#ccfbf1",
+          "weight": 200
+        },
+        {
+          "hexadecimal": "#99f6e4",
+          "weight": 200
+        },
+        {
+          "hexadecimal": "#5eead4",
+          "weight": 300
+        },
+        {
+          "hexadecimal": "#2dd4bf",
+          "weight": 400
+        },
+        {
+          "hexadecimal": "#14b8a6",
+          "weight": 500
+        },
+        {
+          "hexadecimal": "#0d9488",
+          "weight": 600
+        },
+        {
+          "hexadecimal": "#0f766e",
+          "weight": 700
+        },
+        {
+          "hexadecimal": "#115e59",
+          "weight": 800
+        },
+        {
+          "hexadecimal": "#134e4a",
+          "weight": 900
+        }
+      ]
     },
     {
       "name": "lime",
-      "tones": [50, 100, 200, 300, 400, 500, 600, 700, 800, 900]
+      "tones": [
+        {
+          "hexadecimal": "#f7fee7",
+          "weight": 50
+        },
+        {
+          "hexadecimal": "#ecfccb",
+          "weight": 200
+        },
+        {
+          "hexadecimal": "#d9f99d",
+          "weight": 200
+        },
+        {
+          "hexadecimal": "#bef264",
+          "weight": 300
+        },
+        {
+          "hexadecimal": "#a3e635",
+          "weight": 400
+        },
+        {
+          "hexadecimal": "#84cc16",
+          "weight": 500
+        },
+        {
+          "hexadecimal": "#65a30d",
+          "weight": 600
+        },
+        {
+          "hexadecimal": "#4d7c0f",
+          "weight": 700
+        },
+        {
+          "hexadecimal": "#3f6212",
+          "weight": 800
+        },
+        {
+          "hexadecimal": "#365314",
+          "weight": 900
+        }
+      ]
     },
     {
       "name": "cyan",
-      "tones": [50, 100, 200, 300, 400, 500, 600, 700, 800, 900]
+      "tones": [
+        {
+          "hexadecimal": "#ecfeff",
+          "weight": 50
+        },
+        {
+          "hexadecimal": "#cffafe",
+          "weight": 200
+        },
+        {
+          "hexadecimal": "#a5f3fc",
+          "weight": 200
+        },
+        {
+          "hexadecimal": "#67e8f9",
+          "weight": 300
+        },
+        {
+          "hexadecimal": "#22d3ee",
+          "weight": 400
+        },
+        {
+          "hexadecimal": "#06b6d4",
+          "weight": 500
+        },
+        {
+          "hexadecimal": "#0891b2",
+          "weight": 600
+        },
+        {
+          "hexadecimal": "#0e7490",
+          "weight": 700
+        },
+        {
+          "hexadecimal": "#155e75",
+          "weight": 800
+        },
+        {
+          "hexadecimal": "#164e63",
+          "weight": 900
+        }
+      ]
     },
     {
       "name": "slate",
-      "tones": [50, 100, 200, 300, 400, 500, 600, 700, 800, 900]
+      "tones": [
+        {
+          "hexadecimal": "#f8fafc",
+          "weight": 50
+        },
+        {
+          "hexadecimal": "#f1f5f9",
+          "weight": 200
+        },
+        {
+          "hexadecimal": "#e2e8f0",
+          "weight": 200
+        },
+        {
+          "hexadecimal": "#cbd5e1",
+          "weight": 300
+        },
+        {
+          "hexadecimal": "#94a3b8",
+          "weight": 400
+        },
+        {
+          "hexadecimal": "#64748b",
+          "weight": 500
+        },
+        {
+          "hexadecimal": "#475569",
+          "weight": 600
+        },
+        {
+          "hexadecimal": "#334155",
+          "weight": 700
+        },
+        {
+          "hexadecimal": "#1e293b",
+          "weight": 800
+        },
+        {
+          "hexadecimal": "#0f172a",
+          "weight": 900
+        }
+      ]
     }
   ]
 }

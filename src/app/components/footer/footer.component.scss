@@ -1,15 +1,18 @@
 @import './../../../assets/scss/main.scss';
 
 .footer {
+  display: flex;
+  align-items: center;
   position: relative;
-  background: color(white);
+  background-color: color(gray-700);
   box-shadow: color(gray-200) 0px -3px 5px 0px;
-
+  height: $height-header;
+  
   .content {
-    padding: 0.5rem;
     display: flex;
     flex-direction: column;
     row-gap: 10px;
+    width: 100%;
 
     .top {
       display: flex;
@@ -82,7 +85,6 @@
           }
         }
       }
-      
     }
 
     .bottom {

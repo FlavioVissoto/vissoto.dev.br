@@ -1,17 +1,20 @@
-<div class="container-skewed"></div>
+<input type="checkbox" id="overlay" [checked]="showMenu">
+<label class="overlay show" (click)="toggleMenu(undefined)"></label>
 <div class="container">
-    <div class="header-area">
+    <nav>
         <app-header (byToggleMenu)="toggleMenu($event)"></app-header>
-    </div>
-    <div class="main-area">
-        <div class="layout wrapper">
-            <app-sidebar class="sidebar" [byToggleMenu]="byToggleMenu"></app-sidebar>
+    </nav>
+    <main>
+        <div class="wrapper layout">
+            <div class="sidebar">
+                <app-sidebar (byToggleMenu)="toggleMenu($event)"></app-sidebar>
+            </div>
             <div class="content">
                 <router-outlet></router-outlet>
             </div>
         </div>
-    </div>
-    <div class="footer-area">
+    </main>
+    <footer>
         <app-footer></app-footer>
-    </div>
+    </footer>
 </div>

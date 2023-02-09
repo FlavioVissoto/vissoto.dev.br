@@ -1,20 +1,13 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { NgModule } from '@angular/core';
+import { BindCssDirective } from '../../directives/bind-css.directive';
 import { ColorsRoutingModule } from './colors-routing.module';
 import { ColorsComponent } from './colors.component';
 
-
 @NgModule({
-  declarations: [
-    ColorsComponent
-  ],
-  imports: [
-    CommonModule,
-    ColorsRoutingModule
-  ],
-  exports: [
-    ColorsComponent
-  ]
+  declarations: [ColorsComponent, BindCssDirective],
+  imports: [CommonModule, ColorsRoutingModule],
+  providers: [],
+  exports: [ColorsComponent],
 })
-export class ColorsModule { }
+export class ColorsModule {}

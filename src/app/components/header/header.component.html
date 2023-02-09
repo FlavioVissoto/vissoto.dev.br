@@ -2,25 +2,16 @@
     <div class="content layout">
         <div class="brand">
             <div class="nav_toggle">
-                <div class="hamburger">
-                    <input type="checkbox" id="hamburger-chk" class="hamburger-chk" (change)="toggleMenu()">
-                    <label for="hamburger-chk">
-                        <div class="icon">
-                            <span class="bar-top"></span>
-                            <span class="bar-mid"></span>
-                            <span class="bar-bot"></span>
-                        </div>
-                    </label>
-                </div>
+                <i class="fa-solid fa-bars" (click)="toggleMenu(undefined)"></i>
             </div>
-            <app-logo></app-logo>
+            <app-logo class="logo" (click)="toggleMenu(false)"></app-logo>
         </div>
         <nav class="nav">
             <ul class="nav_itens">
-                <li class="nav_item"><a href="#">Página Inicial</a></li>
-                <li class="nav_item"><a href="#">Sobre</a></li>
-                <li class="nav_item"><a href="#">Serviços</a></li>
-                <li class="nav_item"><a href="#">Contatos</a></li>
+                <li class="nav_item"><a (click)="toggleMenu(false)" [routerLink]="'/'">Página Inicial</a></li>
+                <!-- <li class="nav_item"><a (click)="toggleMenu(false)" href="#">Sobre</a></li>
+                <li class="nav_item"><a (click)="toggleMenu(false)" href="#">Serviços</a></li>
+                <li class="nav_item"><a (click)="toggleMenu(false)" href="#">Contatos</a></li> -->
             </ul>
         </nav>
     </div>

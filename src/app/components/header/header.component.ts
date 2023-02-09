@@ -6,12 +6,9 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  private showMenu = false;
+  @Output() byToggleMenu = new EventEmitter<boolean | undefined>();
 
-  @Output() byToggleMenu = new EventEmitter<boolean>();
-
-  toggleMenu(): void {
-    this.showMenu = !this.showMenu;
-    this.byToggleMenu.emit(this.showMenu);
+  toggleMenu(value: boolean | undefined): void {
+    this.byToggleMenu.emit(value);
   }
 }

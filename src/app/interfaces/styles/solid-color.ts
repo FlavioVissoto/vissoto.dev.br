@@ -1,4 +1,9 @@
 export interface SolidColor {
   name: string;
-  tones: number[];
+  tones: SolidColorTone[];
+}
+
+export interface SolidColorTone {
+  hexadecimal: string;
+  weight: number;
 }

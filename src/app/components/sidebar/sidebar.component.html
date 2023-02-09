@@ -1,24 +1,22 @@
-<div class="nav-sidebar" [ngClass]="{'show': showMenu}">
-    <label class="modal-backdrop" for="modal-1"></label>
-    <ul class="sidebar">
-        <li>
-            <div class="item">
-                <a [routerLink]="'/home'" class="title">Págna Inicial</a>
+<div class="nav-sidebar">
+    <div class="brand">
+        <app-logo (click)="toggleMenu()"></app-logo>
+    </div>
+    <ul class="nav-list">
+        <li class="nav-item" *ngFor="let item of sidebar">
+            <div *ngIf="item.href; else elseBlock">
+                <a [routerLink]="item.href" (click)="toggleMenu()" class="nav-link">{{item.title}}</a>
             </div>
-        </li>
-        <li *ngFor="let item of sidebar" >
-            <div class="item">
-                <span class="title">{{item.title}}</span>
-                <span class="auxiliary">{{item.textAuxiliary}}</span>
-            </div>
-            <ul class="sub-item">
-                <li *ngFor="let subitem of item.items">
-                    <a *ngIf="subitem.target != '_blank'" [routerLink]="subitem.href" class="">
-                        <span class="title">{{subitem.text}}</span>
-                        <span *ngIf="subitem.textAuxiliary" class="auxiliary">{{subitem.textAuxiliary}}</span>
-                    </a>
-                </li>
-            </ul>
+            <ng-template #elseBlock>
+                <input type="checkbox" class="nav-sublist-control" id="nav-sublist-{{item.title}}">
+                <label class="nav-link" for="nav-sublist-{{item.title}}">{{item.title}}<i
+                        class="fa-solid fa-chevron-right"></i></label>
+                <ul class="nav-sublist">
+                    <li *ngFor="let subitem of item.items">
+                        <a [routerLink]="subitem.href" (click)="toggleMenu()" class="nav-link">{{subitem.text}}</a>
+                    </li>
+                </ul>
+            </ng-template>
         </li>
     </ul>
 </div>

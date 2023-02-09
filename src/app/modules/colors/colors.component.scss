@@ -1,50 +1,68 @@
 @import './../../../assets/scss/main.scss';
 
 .color-module {
-  .title {
+  .page-title {
     font-size: 1.875rem;
     line-height: 2.25rem;
     font-weight: 800;
   }
   .colors {
-    & > div {
-      margin: 15px 0;
-      p {
-        text-transform: capitalize;
-        margin-bottom: 5px;
-      }
-    }
     .item {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-
-      p {
+      .title {
+        margin-top: 15px;
+        text-transform: capitalize;
         width: 100%;
         padding-bottom: 2px;
-        font-weight: 600;
+        font-weight: 900;
       }
 
-      .color {
-        position: relative;
-        height: 40px;
-        width: 90px;
-        border: 1px solid color(gray-400);
-        background: rgb(16, 60, 231);
-        background: linear-gradient(90deg, rgba(16, 60, 231, 1) 0%, rgba(100, 233, 255, 1) 100%);
-        border-radius: 10px;
+      .boxes {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: space-around;
 
-        .name {
-          font-size: 12px;
-          position: absolute;
-          margin: 0 auto;
-          text-align: center;
-          width: 75%;
-          transform: translate(-50%, -25%);
-          left: 50%;
-          bottom: 0;
-          font-weight: 500;
-          color: color(white);
+        .box {
+          @include tablet {
+            width: 18%;
+          }
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          
+          .color {
+            @include tablet {
+              height: 65px;
+            }
+            position: relative;
+            height: 50px;
+            width: 65px;
+            border: 1px solid color(gray-400);
+            background: var(--color);
+
+            .weight {
+              position: absolute;
+              background-color: color(white);
+              bottom: 0;
+              left: 50%;
+              transform: translate(-50%, -25%);
+              width: 75%;
+              text-align: center;
+              border-radius: 10px;
+              @include font-size-xs;
+              font-weight: 600;
+            }
+          }
+
+          .name {
+            padding-top: 2px;
+            font-size: 12px;
+            text-transform: uppercase;
+            margin: 0 auto;
+            text-align: center;
+            font-weight: 600;
+            color: color(gray-600);
+          }
         }
       }
     }

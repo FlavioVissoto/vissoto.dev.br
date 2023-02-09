@@ -1,13 +1,14 @@
 <div class="color-module">
     <div class="layout">
-        <h1 class="title">Paleta de Cores</h1>
+        <h1 class="page-title">Paleta de Cores</h1>
 
         <div class="colors">
-            <div class="" *ngFor="let item of solidColors">
-                <p>{{item.name}}</p>
-                <div class="item">
-                    <div class="color" *ngFor="let tones of item.tones">
-                        <p class="name">{{tones}}</p>
+            <div class="item" *ngFor="let item of solidColors">
+                <p class="title">{{item.name}}</p>
+                <div class="boxes">
+                    <div class="box" *ngFor="let tones of item.tones">
+                        <div class="color" bindCss [variableName]="'color'" [variableValue]="tones.hexadecimal"><p class="weight">{{tones.weight}}</p></div>
+                        <p class="name">{{tones.hexadecimal}}</p>
                     </div>
                 </div>
             </div>

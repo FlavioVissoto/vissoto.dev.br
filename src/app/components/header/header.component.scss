@@ -1,18 +1,15 @@
-@import './../../../assets/scss/colors.scss';
-@import './../../../assets/scss/media-query.scss';
-@import './../../../assets/scss/prefix.scss';
+@import './../../../assets/scss/main.scss';
 
 .header {
   position: fixed;
   width: 100%;
-  background-color: color(white);
-  padding: 5px 0;
-  box-shadow: color(gray-200) 0px 3px 5px 0px;
-
+  background-color: color(gray-700);
+  height: $height-header;
   .content {
     position: relative;
     display: flex;
     justify-content: space-between;
+    padding: 5px 10px;
 
     .brand {
       display: flex;
@@ -21,11 +18,24 @@
 
       .nav_toggle {
         display: none;
+        i {
+          @include prefix(transition, color 0.2s);
+          color: color(white);
+          @include font-size-3xl;
+
+          &:hover {
+            cursor: pointer;
+            color: color(gray-300);
+          }
+        }
       }
     }
 
     @include tablet {
       .brand {
+        .logo {
+          display: none;
+        }
         .nav_toggle {
           display: block;
         }
@@ -48,68 +58,15 @@
             padding: 0.5rem;
             display: block;
             white-space: nowrap;
+            color: color(white);
 
             &:hover {
-              color: color(blue-700);
+              color: color(gray-300);
             }
 
             @include mobile {
               padding: 0.3rem;
             }
-          }
-        }
-      }
-    }
-  }
-}
-
-.hamburger {
-  .icon {
-    cursor: pointer;
-    position: relative;
-    background: transparent;
-    border: 1px solid transparent;
-
-    [class*='bar-'] {
-      background: color(gray-700);
-      display: block;
-      @include prefix(transform, rotate(0deg));
-      @include prefix(transition, 0.2s ease all);
-      border-radius: 2px;
-      height: 2px;
-      width: 25px;
-      margin-bottom: 4px;
-    }
-
-    .bar-bot {
-      margin-bottom: 0;
-    }
-  }
-  .hamburger-chk {
-    position: absolute;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    width: 1px;
-    margin: -1px;
-    padding: 0;
-    border: 0;
-
-    &:checked {
-      & + label {
-        .icon {
-          .bar-top {
-            @include prefix(transform, rotate(45deg));
-            @include prefix(transform, rotate(45deg));
-            @include prefix(transform-origin, 15% 15%);
-          }
-          .bar-mid {
-            opacity: 0;
-          }
-          .bar-bot {
-            @include prefix(transform, rotate(45deg));
-            @include prefix(transform, rotate(-45deg));
-            @include prefix(transform-origin, 15% 95%);
           }
         }
       }

@@ -4,7 +4,7 @@
  * Copyright 2022 Fonticons, Inc.
  */
  .fa {
-  font-family: var(--fa-style-family,"Font Awesome 6 Pro");
+  font-family: var(--fa-style-family,"Font Awesome");
   font-weight: var(--fa-style,900)
 }
 
@@ -19,7 +19,7 @@
 }
 
 .fa-classic,.fa-light,.fa-regular,.fa-solid,.fa-thin,.fal,.far,.fas,.fat {
-  font-family: "Font Awesome 6 Pro"
+  font-family: "Font Awesome"
 }
 
 .fa-brands,.fab {
@@ -27790,11 +27790,11 @@
 }
 
 :host,:root {
-  --fa-font-light: normal 300 1em/1 "Font Awesome 6 Pro"
+  --fa-font-light: normal 300 1em/1 "Font Awesome"
 }
 
 @font-face {
-  font-family: "Font Awesome 6 Pro";
+  font-family: "Font Awesome";
   font-style: normal;
   font-weight: 300;
   font-display: block;
@@ -27806,11 +27806,11 @@
 }
 
 :host,:root {
-  --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Pro"
+  --fa-font-regular: normal 400 1em/1 "Font Awesome"
 }
 
 @font-face {
-  font-family: "Font Awesome 6 Pro";
+  font-family: "Font Awesome";
   font-style: normal;
   font-weight: 400;
   font-display: block;
@@ -27822,11 +27822,11 @@
 }
 
 :host,:root {
-  --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Pro"
+  --fa-font-solid: normal 900 1em/1 "Font Awesome"
 }
 
 @font-face {
-  font-family: "Font Awesome 6 Pro";
+  font-family: "Font Awesome";
   font-style: normal;
   font-weight: 900;
   font-display: block;
@@ -27838,12 +27838,12 @@
 }
 
 :host,:root {
-  --fa-style-family-classic: "Font Awesome 6 Pro";
-  --fa-font-thin: normal 100 1em/1 "Font Awesome 6 Pro"
+  --fa-style-family-classic: "Font Awesome";
+  --fa-font-thin: normal 100 1em/1 "Font Awesome"
 }
 
 @font-face {
-  font-family: "Font Awesome 6 Pro";
+  font-family: "Font Awesome";
   font-style: normal;
   font-weight: 100;
   font-display: block;

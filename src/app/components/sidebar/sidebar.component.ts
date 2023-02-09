@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 import { Sidebar } from '../../interfaces/sidebar';
 import { SidebarServices } from '../../services/sidebar.services';
@@ -11,14 +11,12 @@ import { SidebarServices } from '../../services/sidebar.services';
 export class SidebarComponent implements OnInit {
   constructor(private sidebarServices: SidebarServices) {}
 
-  @Input() byToggleMenu: EventEmitter<boolean>;
-  showMenu = false;
+  @Output() byToggleMenu = new EventEmitter<boolean>();
 
   sidebar: Sidebar[] = [];
 
   ngOnInit(): void {
     this.getSidebar();
-    this.listenerToggleMenu();
   }
 
   getSidebar(): void {
@@ -29,13 +27,7 @@ export class SidebarComponent implements OnInit {
     });
   }
 
-  listenerToggleMenu(): void {
-    if (this.byToggleMenu) {
-      this.byToggleMenu.subscribe({
-        next: (x: boolean) => {
-          this.showMenu = x;
-        },
-      });
-    }
+  toggleMenu(): void {
+    this.byToggleMenu.emit(false);
   }
 }

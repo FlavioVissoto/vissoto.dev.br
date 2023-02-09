@@ -10,8 +10,13 @@ export class AppComponent {
 
   byToggleMenu = new EventEmitter<boolean>();
   showMenu = false;
-  toggleMenu(showMenu: boolean): void {
-    this.showMenu = showMenu;
+
+  toggleMenu(value: boolean | undefined): void {
+    if (value !== undefined) {
+      this.showMenu = value;
+    } else {
+      this.showMenu = !this.showMenu;
+    }
     this.byToggleMenu.emit(this.showMenu);
   }
 }
